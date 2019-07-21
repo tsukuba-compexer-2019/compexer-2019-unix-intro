@@ -1,0 +1,105 @@
+\documentclass[dvipdfmx]{beamer}
+\usepackage{setspace}
+\usepackage{url}
+
+\AtBeginDvi{\special{pdf:tounicode EUC-UCS2}}
+
+\usetheme{metropolis}
+\setbeamertemplate{footline}[frame number]\renewcommand{\kanjifamilydefault}{\gtdefault}
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+
+\title{Unix と Linux の紹介}
+\author{照井　章}
+\institute{筑波大学 数理物質系}
+\date{2019年7月23日}
+
+\begin{document}
+    
+\begin{frame}
+    \frametitle{}
+    \titlepage
+
+    \begin{center}
+        \url{https://github.com/tsukuba-compexer-2019/compexer-2019-unix-intro}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{この話の内容}
+    \large
+    \setstretch{1.5}
+    \begin{itemize}
+        \item Unix, Linux の生い立ちや特徴など
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Unix とは? }
+
+    \begin{block}{オペレーティングシステム (Operating System, OS)}
+        \begin{itemize}
+            \item 計算機上で動作するソフトウェア
+            \item 入出力装置や記憶装置とのデータのやり取りを管理する
+            \item 計算機上で動作する他のソフトウェアの動作を管理する
+            \item 例: Windows 10 (Microsoft), macOS (Apple), iOS (Apple), Android (Google) など
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Unix の生い立ち---ゲームから生まれた!? \cite{spacetravel}}
+    \begin{itemize}
+        \item<1-> 1969年、AT\&T ベル研究所にて誕生。主な開発者は Ken Thompson, Dennis Ritchie \cite{dmr} ら
+        \begin{itemize}
+            \item<2-> 当時、MITのプロジェクトにベル研が参加し、MulticsというOSを開発していた
+            \item<3-> しかし、プロジェクトの不振によりベル研がMulticsから撤退
+            \item<4-> Multicsで ``Space Travel'' というゲームをやっていた彼らは、そのゲームができなくなることを惜しんだ（らしい）
+            \item<5-> その時、自分達の職場に小さなコンピュータ (PDP-7) が放置されているのを発見
+            \item<6-> 「そいつにゲームを移植しよう！」\dots Unixの始まり
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Unixの普及}
+    \begin{itemize}
+        \item 1970年代から'80年代にかけて、世界の大学や研究機関を中心に普及
+        \item 日本には、石田晴久先生（故人）が1975年頃にベル研から日本に持ち帰る。最初にインストールされたのは筑波大学のマシンだったらしい \cite{sunahara-murai}
+        \item さらに産業界にも普及
+        \item 1990年代から、Unix系OS (BSD, Linux等) が多数誕生し、普及する
+        \begin{itemize}
+            \item AppleのmacOSはDarwinというカーネルに基づくUnix系OS
+        \end{itemize}
+        \item 1080年代終盤からはOSの国際標準の策定にもUnixが貢献
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Unixはなぜ普及したか？}
+
+    \begin{block}{Unix以前にこれだけ多種多様なハードウェアに移植されたOSはほとんどなかった}
+        \begin{itemize}
+            \item OSの主要部がC言語で書かれていて移植性に優れていた
+            \item 単純で柔軟なファイル構造によに、複雑な処理が可能
+            \item ほぼ無償（実費程度の費用）で配布された
+            \item シェルによる対話的な操作性に優れていた
+            \item 開発ツールの使いやすさ
+            \item ネットワーク関連機能の充実（これが後に、Unixがインターネットの各種サーバとして使われることにつながる）
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{参考文献}
+    \begin{thebibliography}{99}
+        \bibitem{dmr} Dennis M. Ritchie. \url{http://cm.bell-labs.co/who/dmr/index.html} (参照 2019-07-21).
+
+        \bibitem{spacetravel} Dennis M. Ritchie. Space Travel: Exploring the solar system and the PDP-7. \url{http://cm.bell-labs.co/who/dmr/spacetravel.html} (参照 2019-07-21).
+        
+        \bibitem{sunahara-murai} 砂原秀樹, 村井純. 石田先生から受け継いだもの. 情報処理, Vol.50, No.7, July 2009. \url{http://id.nii.ac.jp/1001/00060808/}
+
+        
+    \end{thebibliography}    
+\end{frame}
+
+\end{document}
