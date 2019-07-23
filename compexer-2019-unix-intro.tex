@@ -64,13 +64,13 @@
     \frametitle{Unixの普及}
     \begin{itemize}
         \item 1970年代から'80年代にかけて、世界の大学や研究機関を中心に普及
-        \item 日本には、石田晴久先生（故人）が1975年頃にベル研から日本に持ち帰る。最初にインストールされたのは筑波大学のマシンだったらしい \cite{sunahara-murai}
+        \item 日本には、石田晴久先生（故人）が1975年頃にベル研から日本に持ち帰る。日本で最初にUnixがインストールされたのは筑波大学のマシンだったらしい \cite{sunahara-murai}
         \item さらに産業界にも普及
         \item 1990年代から、Unix系OS (BSD, Linux等) が多数誕生し、普及する
         \begin{itemize}
             \item AppleのmacOSはDarwinというカーネルに基づくUnix系OS
         \end{itemize}
-        \item 1080年代終盤からはOSの国際標準の策定にもUnixが貢献
+        \item 1980年代終盤からはOSの国際標準の策定にもUnixが貢献
     \end{itemize}
 \end{frame}
 
@@ -80,11 +80,11 @@
     \begin{block}{Unix以前にこれだけ多種多様なハードウェアに移植されたOSはほとんどなかった}
         \begin{itemize}
             \item OSの主要部がC言語で書かれていて移植性に優れていた
-            \item 単純で柔軟なファイル構造によに、複雑な処理が可能
-            \item ほぼ無償（実費程度の費用）で配布された
+            \item 単純で柔軟なファイル構造により、複雑な処理が可能
+            \item ネットワーク関連機能の充実（これが後に、Unixがインターネットの各種サーバとして使われることにつながる）
             \item シェルによる対話的な操作性に優れていた
             \item 開発ツールの使いやすさ
-            \item ネットワーク関連機能の充実（これが後に、Unixがインターネットの各種サーバとして使われることにつながる）
+            \item ほぼ無償（実費程度の費用）で配布された
         \end{itemize}
     \end{block}
 \end{frame}
@@ -99,9 +99,32 @@
                 \item Linux カーネル (Kernel): OSの中核部分
                 \item Linux ディストリビューション (Distribution): カーネル + ライブラリ + 管理ソフトウェア + アプリケーションソフトウェア 
             \end{itemize}
-            \item Linux カーネルの生みの親: Linus Tovalds (Gitの作者)
         \end{itemize}
     \end{block}
+
+    \begin{block}{Ubuntu (\cite{ubuntu}, \cite{ubuntu-ja})}
+        \begin{itemize}
+            \item Debian GNU/Linux を基盤にしたLinuxディストーション
+            \item Canonical Ltd.（英） の支援のもと、フリーソフトウェアとして開発
+            \item デスクトップ用、サーバ用、IoT（小型組込機器）用、各種クラウド用イメージが配布されている
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Linuxの生い立ち \cite{kazaana}}
+
+    \begin{itemize}
+        \item<1-> Linux カーネルの生みの親: Linus Tovalds (1969--) (Gitの作者)
+        \item<2-> 1991年: Linux の最初の公開。Linusはヘルシンキ大学の学生
+        \item<3-> 当初は、別のUnix系OSの一つであるMINIXを用いて開発
+        \begin{itemize}
+            \item<3-> MINIX: Andrew Tannenbaum（オランダ/アムステルダム自由大学 教授）が開発、配布していた教育用のUnix系OS
+        \end{itemize}
+        \item<4-> Linuxの開発が進み、Linuxのみで開発を進めるようになる
+        \item<5-> ライブラリやアプリケーションソフトウェアに、GNUプロジェクトの成果物を導入。オープンソースソフトウェアとして開発が進む
+        \item<6-> 1990年代後半: 世界の主要なコンピュータ企業がLinuxのサポートを表明。大型計算機から組込機器まで様々な機器にLinuxが移植される
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -145,6 +168,8 @@
 \begin{frame}[allowframebreaks]
     \frametitle{参考文献}
     \begin{thebibliography}{99}
+        \bibitem{kazaana} 風穴江. Linuxキホンのキ. Linux Conference 2001, 2001年9月26日. 
+        \url{http://lc.linux.or.jp/lc2001/papers/tutorial-linuxbasic.pdf} (参照 2019-07-23).
 
         \bibitem{linuxfoundation} The Linux Foundation. \url{https://www.linuxfoundation.org/} (参照 2019-07-22).
 
@@ -154,6 +179,9 @@
         
         \bibitem{sunahara-murai} 砂原秀樹, 村井純. 石田先生から受け継いだもの. 情報処理, Vol.50, No.7, July 2009. \url{http://id.nii.ac.jp/1001/00060808/}
 
+        \bibitem{ubuntu} Canonical Ltd. Ubuntu. \url{https://ubuntu.com/} (参照 2019-07-23).
+
+        \bibitem{ubuntu-ja} Ubuntu Japanese Team. \url{https://www.ubuntulinux.jp/} (参照 2019-07-23).
         
     \end{thebibliography}    
 \end{frame}
